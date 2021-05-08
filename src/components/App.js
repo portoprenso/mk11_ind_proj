@@ -8,34 +8,34 @@ import Login from './Login'
 import PrivateRoute from './PrivateRoute';
 import ForgotPassword from './ForgotPassword';
 import UpdateProfile from './UpdateProfile';
-import RoasterContextProvider from "../contexts/RoasterContext";
+import RosterContextProvider from "../contexts/RosterContext";
 import HomePage from "./HomePage/HomePage";
+import RosterPage from './RosterPage/RosterPage'
+import Header from "../components/Header/Header";
+import ProfilePage from './ProfilePage/ProfilePage';
 
 function App() {
   return (
-    <Container
-    className="d-flex align-items-center justify-content-center"
-    >
         <div style={{
           backgroundColor: 'black'
         }}
         >
           <Router>
-            <RoasterContextProvider>
+            <RosterContextProvider>
             <AuthProvider>
               <Switch>
-                <PrivateRoute exact path="/" component={HomePage} />
-                <PrivateRoute exact path="/profile" component={DashBoard} />
+                <PrivateRoute exact path="/profile" component={ProfilePage} />
                 <PrivateRoute path="/update-profile" component={UpdateProfile} />
                 <Route path="/signup" component={SignUp} />
                 <Route path="/login" component={Login} />
                 <Route path="/forgot-password" component={ForgotPassword} />
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/roster" component={RosterPage} />
               </Switch>
             </AuthProvider>
-            </RoasterContextProvider>
+            </RosterContextProvider>
           </Router>
         </div>
-      </Container>
   );
 }
 
