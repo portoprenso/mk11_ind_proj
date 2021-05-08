@@ -15,5 +15,43 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "roster": [
+    {
+      "name": "SPAWN",
+      "phrase": "ИСКУПЛЕНИЕ",
+      "description": "Эл Симмонс, некогда один из лучших солдат на службе правительства США и самый эффективный убийца, был безжалостно казнен своими же людьми. Заключив сделку с силами тьмы, Симмонс вернулся в мир живых в качестве адского отродья – Спауна. На сей раз ему предстоит сразиться за превосходство с лучшими бойцами в смертельной битве.",
+      "bigPic": "https://cdn-prod.mortalkombat.com/roster/spawn/body.png",
+      "littlePic": "https://cdn-prod.mortalkombat.com/roster/spawn/thumb-p.png",
+      "video": "https://cdn-prod.mortalkombat.com/roster/spawn/video.mp4",
+      "id": 1
+    },
+    {
+      "name": "Джокер",
+      "phrase": "ХАОС",
+      "description": "Непредсказуемый, жестокий и опасный, Джокер - само воплощение хаоса! Именно он убил Робина, искалечил Бэтгерл, пытал и безжалостно убил множество людей в мире DС. А теперь он намерен заявить о себе в качестве бойца Mortal Kombat.",
+      "bigPic": "https://cdn-prod.mortalkombat.com/roster/the-joker/body.png",
+      "littlePic": "https://cdn-prod.mortalkombat.com/roster/the-joker/thumb-p.png",
+      "video": "https://cdn-prod.mortalkombat.com/roster/the-joker/video.mp4",
+      "id": 2
+    },
+    {
+      "name": "Fujin",
+      "phrase": "SECURITY",
+      "description": "The God of Wind, Fujin serves the Elder Gods alongside his brother, Raiden, as Protectors of Earthrealm. Affable and lighthearted, he’s adept at inspiring peoples’ innate capacity for goodness and heroism to conquer forces of hatred and tyranny. Fujin believes Earthrealm’s best days are still to come, and he fights to ensure that bright future.",
+      "bigPic": "https://cdn-prod.mortalkombat.com/roster/fujin/body.png",
+      "littlePic": "https://cdn-prod.mortalkombat.com/roster/fujin/thumb-p.png",
+      "video": "",
+      "id": 3
+    },
+    {
+      "name": "Рэмбо",
+      "phrase": "CВОБОДА",
+      "description": "Джон Рэмбо - бывший солдат спецназа Соединенных Штатов, которого постоянно преследуют мысли о пережитом во Вьетнаме. Он груб, агрессивен и хорошо известен тем, что ввязывается в опасные ситуации в одиночку. Чтобы проникнуть во вселенную Mortal Kombat, Рэмбо снова использует свои безжалостные боевые навыки.",
+      "bigPic": "https://cdn-prod.mortalkombat.com/roster/rambo/body.png",
+      "littlePic": "https://cdn-prod.mortalkombat.com/roster/rambo/thumb-p.png",
+      "video": "",
+      "id": 4
+    }
+  ]
 }

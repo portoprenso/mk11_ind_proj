@@ -1,0 +1,116 @@
+.roster__hero{
+    background-image: url(../../assets/character-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.roster__container{
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bio__photo{
+    z-index: 1;
+}
+
+.bio__meta{
+    color: white;
+    align-self: center;
+}
+
+.roster__container__bio{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.bio__meta__name{
+    display: flex;
+    position: relative;
+}
+
+.bio__meta__name__strap{
+    width: initial;
+    position: absolute;
+    /* right: -115px; */
+    right: 0;
+    /* left: 0; */
+    z-index: 0;
+}
+
+.bio__meta__name__top{
+    z-index: 5;
+}
+
+.roster__container__video {
+    padding-top: 50px;
+    border-bottom: 5px solid #fda90f;
+}
+
+.roster__container__charactersList{
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.roster__container__charactersList__title div{
+    height: 2px;
+    width: 40vw;
+    background-color: #6a6969;
+}
+
+.roster__container__charactersList__title{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.roster__container__charactersList__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.roster__container__charactersList__list__card::after{
+    background: linear-gradient(180deg,transparent,#000);
+    content: "_";
+    /* justify-self: flex-start; */
+    color: transparent;
+    z-index: 50;
+}
+
+.roster__container__charactersList__list__card{
+    width: 100px;
+    height: 118px;
+    margin: 5px;
+    position: relative;
+    color: white;
+    background: radial-gradient(ellipse at center,#1e2938 0,#080808 100%);
+    border: 1px solid #152229;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.roster__container__charactersList__list__card img{
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.roster__container__charactersList__list__card div{
+    text-align: center;
+    align-self: flex-end;
+    z-index: 5;
+    margin: 0 auto;
+}
+
+.testRoster{
+    color: white;
+}

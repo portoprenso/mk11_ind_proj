@@ -1,0 +1,19 @@
+.profilePage__addHero__inputs{
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column; */
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.inp-type{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profilePage__button{
+    max-height: 64px;
+    max-width: 128px;
+}
