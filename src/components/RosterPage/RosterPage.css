@@ -56,6 +56,7 @@
     align-items: center;
     margin: 0 auto;
     flex-direction: column;
+    padding-top: 100px;
 }
 
 .roster__container__charactersList__title div{

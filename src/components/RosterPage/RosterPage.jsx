@@ -17,7 +17,6 @@ const RosterPage = () => {
     }, []);
 
     useEffect(() => {
-        // console.log(clickedId)
         getFighterInfo(clickedId);
         console.log(fighterInfo)
     }, [clickedId])
@@ -26,10 +25,7 @@ const RosterPage = () => {
         setClickedId(id)
         await getFighterInfo(id)
         window.scrollTo({top: 0, behavior: 'smooth'});
-        // console.log(fighterInfo)
     }
-
-    // console.log(fighterInfo)
 
     function returnVideo(url){
         return(
@@ -60,7 +56,6 @@ const RosterPage = () => {
                                 <div className="bio__meta__name">
                                     <h2 className="bio__meta__name__top">{fighterInfo.name}</h2>
                                     {/* <img className="bio__meta__name__strap" src={YellowStrap} /> */}
-
                                 </div>
                                 <h3 className="bio__meta__name__top">{fighterInfo.phrase}</h3>
                                 <div className="bio__meta__description bio__meta__name__top">
@@ -86,7 +81,6 @@ const RosterPage = () => {
          <Header/>
          <div className="roster__hero">
             <div className="roster__container">
-
                 {returnRoster()}
                 <div className="roster__container__charactersList">
                     <div className="roster__container__charactersList__title">

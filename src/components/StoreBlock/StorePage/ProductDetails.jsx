@@ -6,7 +6,8 @@ import { useProducts } from '../../../contexts/ProductsContext';
 import Header from '../../Header/Header';
 import { Button, TextareaAutosize } from '@material-ui/core';
 import { useAuth } from '../../../contexts/AuthContext';
-
+import { Link } from 'react-router-dom';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const ProductDetails = (props) => {
     // console.log(props);
@@ -43,6 +44,7 @@ const ProductDetails = (props) => {
     }));
 
     function showCommentSection(){
+        // console.log(productDetails)
         return(
             productDetails.commentary ? (productDetails.commentary.map((item) => (
                 <div id={item.time}>
@@ -70,6 +72,21 @@ const ProductDetails = (props) => {
 
     }
 
+    function showButtonText() {
+        // console.log(productDetails)
+        return(
+            <>
+            { productDetails.favorites && productDetails.favorites.length > 0 && productDetails.favorites.includes(currentUser.email) ? (<>Удалить из избранного</>) : (<>Добавить в избранное</>)}
+            </>
+        )
+    }
+
+    function showLikesCount() {
+        return (<>
+        { productDetails.likes && productDetails.likes.length > 0 ? (productDetails.likes.length) : (<></>)}
+        </>
+        )
+    }
 
     async function handleAddComment(id) {
         let newObj = {
@@ -95,6 +112,44 @@ const ProductDetails = (props) => {
         commentRef.current.value = null;
       }
 
+    async function handleAddToFav(id) {
+        let newObj = {
+            ...productDetails
+        };
+        if(newObj.favorites.length > 0) {
+            if(newObj.favorites.includes(currentUser.email)){
+                newObj.favorites = newObj.favorites.filter(elem => elem !== currentUser.email)
+            } else {
+                newObj.favorites.push(currentUser.email)
+            }
+        }
+        else {
+            newObj.favorites.push(currentUser.email)
+        }
+
+        await editProduct(id, newObj, history);
+        await getProductDetails(id)
+      }
+
+    async function handleLike(id) {
+        let newObj = {
+            ...productDetails
+        };
+        if(newObj.likes.length > 0) {
+            if(newObj.likes.includes(currentUser.email)){
+                newObj.likes = newObj.likes.filter(elem => elem !== currentUser.email)
+            } else {
+                newObj.likes.push(currentUser.email)
+            }
+        }
+        else {
+            newObj.likes.push(currentUser.email)
+        }
+
+        await editProduct(id, newObj, history);
+        await getProductDetails(id)
+      }
+
 
     async function handleDeleteComment(id, timeStamp) {
         let newObj = {
@@ -104,7 +159,7 @@ const ProductDetails = (props) => {
         // console.log(id);
         // console.log(timeStamp);
         // console.log(newObj.commentary);
-        console.log(newObj);
+        // console.log(newObj);
         await editProduct(id, newObj, history);
         await getProductDetails(id)
       }
@@ -172,8 +227,37 @@ const ProductDetails = (props) => {
                         className="offset">В корзину</button>
                             </div>
                             <div className="two_btn">
-                            <button className="fill">Добавить в избранное</button>
-                            <button className="fill">Поставить Лайк</button>
+                            
+                            {currentUser ? (
+                            <button onClick={() => handleAddToFav(id)} className="fill">
+                                {currentUser ? (
+                                    showButtonText()
+                                )
+                                    :
+                                (<>Добавить в избранное</>)
+                                }
+                                </button>
+                                
+                            )
+                            :
+                            (
+                            <Link exact to="/login">
+                            <button className="fill">
+                            Добавить в избранное
+                            </button>
+                            </Link>)
+                        
+                        }
+                            {/* <button className="fill">Поставить Лайк</button> */}
+                            {currentUser ? (
+                                <Button onClick={() => handleLike(id)}><FavoriteIcon /> {showLikesCount()} </Button>
+
+                            )
+                            :
+                            (
+                                <Link exact to="/login"><Button><FavoriteIcon /> {showLikesCount()} </Button></Link>
+                            )
+                            }
                             </div>
                         </div>
                     
