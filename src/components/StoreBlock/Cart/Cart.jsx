@@ -5,6 +5,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom'
 import { useProducts } from '../../../contexts/ProductsContext';
+import Header from '../../Header/Header';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,13 +34,15 @@ const Cart = () => {
     }, [])
 
     return (
+        <>
+        <Header/>
         <div className="cart">
             {cart.products ? (
-                <div>
+                <div className="cart-container">
                     <table className="cart__table">
                         <tbody>
                             {cart.products.map(elem => (
-                                    <tr key={elem.item.id}>
+                                    <tr className="cart__tr-item" key={elem.item.id}>
                                         <div className="img">
                                             <img src={elem.item.image}/>
                                         </div>
@@ -66,6 +69,7 @@ const Cart = () => {
                 <CircularProgress />
             ) }
         </div>
+        </>
     );
 };
 

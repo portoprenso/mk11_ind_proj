@@ -27,7 +27,17 @@
           "text": "kmsgklks",
           "email": "portoprenso@gmail.com",
           "time": 1620620584305
+        },
+        {
+          "text": "test comment",
+          "email": "chegevara.cgv@mail.ru",
+          "time": 1620645928261
         }
+      ],
+      "favorites": [],
+      "likes": [
+        "portoprenso@gmail.com",
+        "chegevara.cgv@mail.ru"
       ]
     },
     {
@@ -48,7 +58,11 @@
           "email": "portoprenso@gmail.com",
           "time": 1620620198714
         }
-      ]
+      ],
+      "favorites": [
+        "portoprenso@gmail.com"
+      ],
+      "likes": []
     },
     {
       "title": "RESIDENT EVIL VILLAGE",
@@ -62,7 +76,9 @@
       "imageLarge": "https://steampay.com/product/resident-evil-village.jpg?1611273085",
       "countInStock": "0",
       "id": 20,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "TERRARIA",
@@ -76,7 +92,9 @@
       "imageLarge": "https://steampay.com/product/terraria.jpg?1526257080",
       "countInStock": "152",
       "id": 22,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "THE ELDER SCROLLS V: SKYRIM",
@@ -90,7 +108,9 @@
       "imageLarge": "https://steampay.com/product/the-elder-scrolls-v-skyrim.jpg?1527843110",
       "countInStock": "53",
       "id": 23,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "CONAN EXILES",
@@ -125,7 +145,9 @@
           "email": "portoprenso@gmail.com",
           "time": 1620474662364
         }
-      ]
+      ],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "BIOMUTANT",
@@ -139,7 +161,9 @@
       "imageLarge": "https://steampay.com/product/biomutant.jpg?1557596243",
       "countInStock": "0",
       "id": 25,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "VAMPIRE: THE MASQUERADE",
@@ -153,7 +177,9 @@
       "imageLarge": "https://steampay.com/product/vampire-the-masquerade-bloodlines-2.jpg?1553781698",
       "countInStock": "0",
       "id": 26,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "CHIVALRY II",
@@ -167,7 +193,9 @@
       "imageLarge": "https://steampay.com/product/chivalry-2.jpg?1614633266",
       "countInStock": "0",
       "id": 27,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "DAYS GONE",
@@ -181,7 +209,9 @@
       "imageLarge": "DAYS GONE",
       "countInStock": "0",
       "id": 28,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "TOTAL WAR: WARHAMMER III",
@@ -195,7 +225,9 @@
       "imageLarge": "https://steampay.com/product/total-war-warhammer-iii.jpg?1612436706",
       "countInStock": "0",
       "id": 29,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "EUROPA UNIVERSALIS IV",
@@ -209,7 +241,9 @@
       "imageLarge": "https://steampay.com/product/europa-universalis-iv-leviathan.jpg?1619094768",
       "countInStock": "0",
       "id": 30,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "EVIL GENIUS 2",
@@ -223,7 +257,9 @@
       "imageLarge": "https://steampay.com/product/evil-genius-2-world-domination.jpg?1560356000",
       "countInStock": "0",
       "id": 31,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "STAR DYNASTIES",
@@ -237,7 +273,9 @@
       "imageLarge": "https://steampay.com/product/star-dynasties.jpg?1616322541",
       "countInStock": "212",
       "id": 32,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "XCOM: ULTIMATE COLLECTION",
@@ -251,7 +289,9 @@
       "imageLarge": "https://steampay.com/product/xcom-ultimate-collection.jpg?1619645339",
       "countInStock": "1231",
       "id": 33,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "EMPIRE OF SIN",
@@ -265,7 +305,9 @@
       "imageLarge": "https://steampay.com/product/empire-of-sin.jpg?1560443577",
       "countInStock": "1231",
       "id": 34,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     },
     {
       "title": "WORMS RUMBLE - LEGENDS PACK",
@@ -279,19 +321,11 @@
       "imageLarge": "https://steampay.com/product/worms-rumble-legends-pack.jpg?1613475056",
       "countInStock": "12",
       "id": 35,
-      "commentary": []
+      "commentary": [],
+      "favorites": [],
+      "likes": []
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "roster": [
     {
       "name": "SPAWN",

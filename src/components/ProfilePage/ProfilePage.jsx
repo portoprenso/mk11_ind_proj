@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import { Card, Alert } from 'react-bootstrap'
 import { Button, ButtonGroup, Grid, makeStyles, TextareaAutosize, Typography } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom'
@@ -7,6 +7,8 @@ import { useAuth } from '../../contexts/AuthContext';
 import './ProfilePage.css'
 import { useRoster } from '../../contexts/RosterContext';
 import Header from '../Header/Header';
+import { useProducts } from '../../contexts/ProductsContext';
+import ProductCard from '../StoreBlock/StorePage/ProductCard';
 
 const useStyles = makeStyles((theme) => ({
   oldOrders__itemContainer: {
@@ -15,12 +17,13 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-
-const ProfilePage = () => {
+  
+  const ProfilePage = () => {
     const classes = useStyles()
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
     const { addNewFighter } = useRoster()
+    const { productsData, getProductsData, editProduct, productDetails, getProductDetails } = useProducts()
     const history = useHistory()
     const nameRef = useRef()
     const phraseRef = useRef()
@@ -28,7 +31,33 @@ const ProfilePage = () => {
     const bigPicRef = useRef()
     const littlePicRef = useRef()
     const videoRef = useRef()
-    console.log(currentUser)
+    // console.log(currentUser)
+
+    useEffect(() => {
+      getProductsData(history)
+    }, []);
+
+
+    async function handleAddToFav(id) {
+      let { data } = await axios(`http://localhost:8000/products/${id}`)
+      console.log(data)
+
+      if(data.favorites.length > 0) {
+          if(data.favorites.includes(currentUser.email)){
+              data.favorites = data.favorites.filter(elem => elem !== currentUser.email)
+          } else {
+              data.favorites.push(currentUser.email)
+          }
+      }
+      else {
+          data.favorites.push(currentUser.email)
+      }
+
+      await editProduct(id, data, history);
+      await getProductDetails(id)
+      console.log(productDetails.favorites)
+    }
+
     async function handleLogout() {
         setError('')
         try {
@@ -87,34 +116,47 @@ const ProfilePage = () => {
         <Card.Body>
             <h2 className="text-center mb-4">Мой профиль</h2>
             <div className="card-container">
-      <div className="card-content">
-      <div className="image-container">
-        <h3 className="profile"></h3>
-        {/* <img className="img-pro" src={Pro} alt=""/> */}
-      </div>
-      <div className="card-title">
-        <h3></h3>
-      </div>
-      <div className="card-body">
-        {/* <p>{body}</p> */}
-      </div>
+              <div className="card-content">
+                <div className="image-container">
+                  <h3 className="profile"></h3>
+                  {/* <img className="img-pro" src={Pro} alt=""/> */}
+                </div>
+                <div className="card-title">
+                  <h3></h3>
+                </div>
+                <div className="card-body">
+                  {/* <p>{body}</p> */}
+                </div>
 
-      </div>
-      <div className="btn">
-        <Button>
-            {error && <Alert variant="danger">{error}</Alert>}
-            <strong>Email:</strong> {currentUser.email}
-        </Button>
-       
-    </div>
-      </div>
-      <ButtonGroup className="dashBoard__buttongroup">
-            <Button color="primary" variant="contained"><Link to="/update-profile">Ред. профиль</Link></Button>
-            <Button color="primary" variant="contained" className="dashboard__logoutButton" onClick={handleLogout}><Link>Выйти</Link></Button>
-      </ButtonGroup>
+                </div>
+                <div className="btn">
+                  <Button className="profile-page__emailInfo-button" onClick={() => {console.log(productsData)}}>
+                      {error && <Alert variant="danger">{error}</Alert>}
+                      <strong>Email:</strong> {currentUser.email}
+                  </Button>
+                <ButtonGroup className="dashBoard__buttongroup">
+                      <Button color="primary" variant="contained"><Link to="/update-profile">Ред. профиль</Link></Button>
+                      <Button color="primary" variant="contained" className="dashboard__logoutButton" onClick={handleLogout}><Link>Выйти</Link></Button>
+                </ButtonGroup>
+                </div>
+              </div>
         </Card.Body>
     </Card>
-    <div>asd</div>
+    <div className="profile-page__fav-block">
+      <div>
+        {productsData.map(item => {
+        if (item.favorites.includes(currentUser.email)){
+          return(
+          <div className="fav-block__item">
+            <ProductCard xs={12} sm={12}  item={item} key={item.id} />
+            <Button className="fav-block__item__removeButton" onClick={() => handleAddToFav(item.id)}>Удалить из избранного</Button>
+          </div>
+          )
+        }
+
+        })}
+      </div>
+    </div>
     <div className="profilePage__addHero__inputs">
     <form className="inp-type" >
       <Grid className="inp-type__inputContainers">

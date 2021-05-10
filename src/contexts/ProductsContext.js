@@ -17,6 +17,7 @@ const INIT_STATE = {
     productDetails: {},
     paginationPages: 1,
     cart: {},
+    dataLimit: 8
     // cartLength: getCountProductsInCart(),
 }
 
@@ -44,6 +45,10 @@ const reducer = (state=INIT_STATE, action) =>{
             return {...state, cartLength: action.payload}
         case 'GET_PRODUCTS_DETAILS':
             return {...state, productDetails: action.payload}
+        case 'CHANGE_DATA_LIMIT':
+            return {...state, dataLimit: action.payload}
+        case 'NULIFY_DATA_LIMIT':
+            return {...state, dataLimit: action.payload}
         default: return state
     }
 }
@@ -53,13 +58,35 @@ const ProductsContextProvider = ({ children }) => {
     const history = useHistory()
     const getProductsData = async (history) => {
         const search = new URLSearchParams(history.location.search)
-        search.set('_limit', 8)
+        search.set('_limit', state.dataLimit)
         history.push(`${history.location.pathname}?${search.toString()}`)
-        let res = await axios(`${JSON_API}/products/?_limit=8&${window.location.search}`)
+        let res = await axios(`${JSON_API}/products/?_limit=${state.dataLimit}&${window.location.search}`)
         dispatch({
             type: "GET_PRODUCTS_DATA",
             payload: res
         })
+    }
+
+    const changeDataLimit = async (story) => {
+        let some = state.dataLimit
+        some += 8
+        // console.log(some)
+        dispatch({
+            type: "CHANGE_DATA_LIMIT",
+            payload: some
+        })
+        console.log(state.dataLimit)
+        // await getProductsData(story)
+    }
+
+    const nulifyDataLimit = async () => {
+        let some = 8
+        dispatch({
+            type: "NULIFY_DATA_LIMIT",
+            payload: some
+        })
+        await history.push('/store/')
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
 
@@ -190,6 +217,7 @@ const ProductsContextProvider = ({ children }) => {
         cartLength: state.cartLength,
         cart: state.cart,
         productDetails: state.productDetails,
+        dataLimit: state.dataLimit,
         getProductsData,
         addProductToCart,
         getCart,
@@ -200,7 +228,9 @@ const ProductsContextProvider = ({ children }) => {
         getProductDetails,
         editProduct,
         removeProductFromCart,
-        removeAllProductsFromCart
+        removeAllProductsFromCart,
+        changeDataLimit,
+        nulifyDataLimit
     }
 
     return (

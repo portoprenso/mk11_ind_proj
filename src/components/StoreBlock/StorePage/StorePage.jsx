@@ -19,7 +19,8 @@ import purple from '@material-ui/core/colors/purple';
 import red from '@material-ui/core/colors/red';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { orange } from '@material-ui/core/colors';
-
+import SideBar from '../../SideBar/SideBar';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
   
   const theme = createMuiTheme({
     status: {
@@ -34,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
     productList__hero__main:{
         backgroundImage: 'url(https://cdn-prod.mortalkombat.com/ultimate/media/media-bg.jpg)',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        minHeight: '100vh'
     },
     productList__root: {
         flexGrow: 1,
@@ -116,7 +118,9 @@ const StorePage = (props) => {
         getProductsDataStockSorted,
         getProductsDataExpectedSorted,
         getProductsDataDiscountSorted,
-        productsWithDiscount
+        productsWithDiscount,
+        changeDataLimit,
+        dataLimit
     } = useProducts()
     function getPage() {
         const search = new URLSearchParams(history.location.search)
@@ -143,11 +147,14 @@ const StorePage = (props) => {
         setPage(page)
         getProductsData(history)
     }
+
+    console.log(dataLimit)
+
     useEffect(() => {
         getProductsData(history);
         // getProductsDataDiscountSorted(history);
         // console.log(productsWithDiscount);
-    },[])
+    },[dataLimit])
     return (
         <>
         <Header />
@@ -207,10 +214,11 @@ const StorePage = (props) => {
                         </SwipeableViews>
                     </div>
 
-
+                                    <SideBar {...props}/>
 
                 </Grid>
-                <Pagination className={classes.paginationClass} page={+page} onChange={(event, page) => {handlePage(event, page)}} count={paginationPages} color="primary" />
+                <Button className="storePage__showMoreButton" onClick={() => {changeDataLimit(history)}}><DoubleArrowIcon/></Button>
+                {/* <Pagination className={classes.paginationClass} page={+page} onChange={(event, page) => {handlePage(event, page)}} count={paginationPages} color="primary" /> */}
             </Grid>
             </div>
 

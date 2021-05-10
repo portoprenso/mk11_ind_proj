@@ -32,10 +32,11 @@
 .header__ul{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 65%;
     list-style-type: none;
     margin: auto auto;
     font-family: Roboto Condensed,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    align-items: center;
 }
 
 .ul__item {
