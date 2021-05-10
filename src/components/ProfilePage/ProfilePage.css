@@ -17,3 +17,15 @@
     max-height: 64px;
     max-width: 128px;
 }
+
+.profile-page__main-container{
+    color: white;
+    background-image: url(../../assets/character-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.profile-page__main-container .card{
+    background-color: transparent;
+}

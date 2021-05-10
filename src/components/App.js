@@ -1,9 +1,7 @@
 import React from 'react'
 import SignUp from './SignUp'
-import { Container } from 'react-bootstrap'
 import { AuthProvider } from '../contexts/AuthContext';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import DashBoard from './DashBoard';
 import Login from './Login'
 import PrivateRoute from './PrivateRoute';
 import ForgotPassword from './ForgotPassword';
@@ -11,8 +9,34 @@ import UpdateProfile from './UpdateProfile';
 import RosterContextProvider from "../contexts/RosterContext";
 import HomePage from "./HomePage/HomePage";
 import RosterPage from './RosterPage/RosterPage'
-import Header from "../components/Header/Header";
 import ProfilePage from './ProfilePage/ProfilePage';
+import ProductsContextProvider from '../contexts/ProductsContext';
+import StorePage from './StoreBlock/StorePage/StorePage';
+import ProductDetails from './StoreBlock/StorePage/ProductDetails';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Cart from './StoreBlock/Cart/Cart';
+import EditProduct from './StoreBlock/StorePage/EditProduct';
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#fda90f'
+    },
+    secondary: {
+      main: '#e30000'
+    },
+    warning: {
+      main: '#e30000'
+    }
+  }
+});
+
+
+
+
+
+
 
 function App() {
   return (
@@ -21,8 +45,10 @@ function App() {
         }}
         >
           <Router>
+            <MuiThemeProvider theme={theme}>
             <RosterContextProvider>
             <AuthProvider>
+            <ProductsContextProvider>
               <Switch>
                 <PrivateRoute exact path="/profile" component={ProfilePage} />
                 <PrivateRoute path="/update-profile" component={UpdateProfile} />
@@ -31,9 +57,16 @@ function App() {
                 <Route path="/forgot-password" component={ForgotPassword} />
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/roster" component={RosterPage} />
+                <Route exact path="/store" component={StorePage} />
+                <Route exact path='/store/gamedetails/:id' component={ProductDetails}/>
+                <Route exact path='/cart' component={Cart}/>
+                <Route exact path='/store/editproduct/:id' component={EditProduct}/>
+
               </Switch>
+            </ProductsContextProvider>
             </AuthProvider>
             </RosterContextProvider>
+            </MuiThemeProvider>
           </Router>
         </div>
   );

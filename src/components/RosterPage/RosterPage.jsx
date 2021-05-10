@@ -25,6 +25,7 @@ const RosterPage = () => {
     async function handleChangeId(id){
         setClickedId(id)
         await getFighterInfo(id)
+        window.scrollTo({top: 0, behavior: 'smooth'});
         // console.log(fighterInfo)
     }
 

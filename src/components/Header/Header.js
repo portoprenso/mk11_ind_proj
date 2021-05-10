@@ -46,7 +46,7 @@ export default function Header() {
                   <li className="ul__item">#MKKOLLECTIVE</li>
                   <li className="ul__item">Сообщество</li>
                   <li className="ul__item">Галлерея</li>
-                  <li className="ul__item">ESports</li>
+                  <Link exact to="/store"><li className="ul__item">Продукция</li></Link>
                   { currentUser ? 
                     (
                       <Link exact to="/profile"><li className="ul__item"><button className='btn-buy'>Мой профиль</button></li></Link>
