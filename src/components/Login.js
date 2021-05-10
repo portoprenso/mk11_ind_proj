@@ -25,7 +25,7 @@ const Login = () => {
         setLoading(false)
     }
     return (
-        <div>
+        
             <>
             <Card>
                 <Card.Body>
@@ -51,7 +51,7 @@ const Login = () => {
                 Need an account? <Link to="/signup">Sign Up</Link>
             </div>
             </>
-        </div>
+
     );
 };
 

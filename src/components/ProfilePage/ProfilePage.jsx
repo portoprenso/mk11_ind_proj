@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useAuth } from '../../contexts/AuthContext';
 import './ProfilePage.css'
 import { useRoster } from '../../contexts/RosterContext';
+import Header from '../Header/Header';
 
 const useStyles = makeStyles((theme) => ({
   oldOrders__itemContainer: {
@@ -27,7 +28,7 @@ const ProfilePage = () => {
     const bigPicRef = useRef()
     const littlePicRef = useRef()
     const videoRef = useRef()
-
+    console.log(currentUser)
     async function handleLogout() {
         setError('')
         try {
@@ -78,11 +79,13 @@ const ProfilePage = () => {
   
 
   return (
-    <div style={{dispaly:"flex"}}>
-      <div className='fff'>
+    <>
+    <Header />
+    <div style={{dispaly:"flex", paddingTop: 50}}>
+      <div className='profile-page__main-container'>
     <Card>
         <Card.Body>
-            <h2 className="text-center mb-4">Profile</h2>
+            <h2 className="text-center mb-4">Мой профиль</h2>
             <div className="card-container">
       <div className="card-content">
       <div className="image-container">
@@ -111,6 +114,7 @@ const ProfilePage = () => {
       </ButtonGroup>
         </Card.Body>
     </Card>
+    <div>asd</div>
     <div className="profilePage__addHero__inputs">
     <form className="inp-type" >
       <Grid className="inp-type__inputContainers">
@@ -182,6 +186,7 @@ const ProfilePage = () => {
         } */}
         </div>
     </div>
+    </>
   );
 };
 export default ProfilePage;

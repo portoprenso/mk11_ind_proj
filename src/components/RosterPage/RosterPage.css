@@ -84,6 +84,9 @@
     /* justify-self: flex-start; */
     color: transparent;
     z-index: 50;
+    position: absolute;
+    top: 92px;
+    width: inherit;
 }
 
 .roster__container__charactersList__list__card{
@@ -111,6 +114,3 @@
     margin: 0 auto;
 }
 
-.testRoster{
-    color: white;
-}

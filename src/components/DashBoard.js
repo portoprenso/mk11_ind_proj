@@ -26,7 +26,7 @@ const DashBoard = () => {
         <>
         <Card>
             <Card.Body>
-                <h2 className="text-center mb-4">Profile</h2>
+                <h2 className="text-center mb-4">Мой профиль</h2>
                 {error && <Alert variant="danger">{error}</Alert>}
                 <strong>Email:</strong> {currentUser.email}
                 <Link to="/update-profile" className="btn btn-primary w-100 mt-3">Update profile</Link>
