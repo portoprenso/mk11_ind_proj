@@ -62,3 +62,12 @@
 .profile-page__emailInfo-button{
     background: rgba(255, 255, 255, 0.1)!important;
 }
+
+.profilePage__user-image{
+    border-radius: 100px;
+}
+
+.profilePage__user-name{
+    /* color: white; */
+    background: rgba(255, 255, 255, 0.1)!important;
+}

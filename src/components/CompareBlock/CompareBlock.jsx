@@ -19,6 +19,7 @@ const CompareBlock = () => {
                 <img className='compare-block__cardImg' src={firstCardImg} alt="firstCardImg"/>
                 <div className="compare-block__meta">
                   <h3>MORTAL KOMBAT 11 ULTIMATE</h3>
+                  <img src="https://cdn-prod.mortalkombat.com/ultimate/global/vectors/tiny-horizontal-rule.svg"/>
                     <ul>
                         Включает:
                         <li>Базовая игра Mortal Kombat 11</li>
@@ -31,9 +32,10 @@ const CompareBlock = () => {
         </div>
         <div data-aos="zoom-in" className="compare-block__card">
             <div className="compare-block__card__inner">
-                <img className='compare-block__cardImg' src={firstCardImg} alt="firstCardImg"/>
+                <img className='compare-block__cardImg' src="https://cdn-prod.mortalkombat.com/ultimate/purchase/packs/default-kombat-pack-2.jpg" alt="firstCardImg"/>
                 <div className="compare-block__meta">
                   <h3>БОЕВОЙ НАБОР 2</h3>
+                  <img src="https://cdn-prod.mortalkombat.com/ultimate/global/vectors/tiny-horizontal-rule.svg"/>
                     <ul>
                         Включает:
                         <li>
@@ -54,9 +56,10 @@ const CompareBlock = () => {
         </div>
         <div data-aos="zoom-in" className="compare-block__card">
             <div className="compare-block__card__inner">
-                <img className='compare-block__cardImg' src={firstCardImg} alt="firstCardImg"/>
+                <img className='compare-block__cardImg' src="https://cdn-prod.mortalkombat.com/ultimate/purchase/packs/default-aftermath.jpg" alt="firstCardImg"/>
                 <div className="compare-block__meta">
                   <h3>MORTAL KOMBAT 11 ULTIMATE</h3>
+                  <img src="https://cdn-prod.mortalkombat.com/ultimate/global/vectors/tiny-horizontal-rule.svg"/>
                     <ul>
                         Включает:
                         <li>
@@ -78,9 +81,10 @@ const CompareBlock = () => {
         </div>
         <div data-aos="zoom-in" className="compare-block__card">
             <div className="compare-block__card__inner">
-                <img className='compare-block__cardImg' src={firstCardImg} alt="firstCardImg"/>
+                <img className='compare-block__cardImg' src="https://cdn-prod.mortalkombat.com/ultimate/purchase/packs/default-kombat-pack-1.jpg" alt="firstCardImg"/>
                 <div className="compare-block__meta">
                   <h3>БОЕВОЙ НАБОР</h3>
+                  <img src="https://cdn-prod.mortalkombat.com/ultimate/global/vectors/tiny-horizontal-rule.svg"/>
                     <ul>
                         Включает:
                         <li>

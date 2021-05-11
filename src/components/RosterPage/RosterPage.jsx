@@ -6,7 +6,7 @@ import './RosterPage.css'
 import WarriorPhoto from '../../assets/body.png'
 import YellowStrap from '../../assets/character-title-bg.png'
 import { useRoster } from '../../contexts/RosterContext';
-
+import Footer from '../Footer/Footer'
 
 const RosterPage = () => {
     const { getRosterData, rosterData, getFighterInfo, fighterInfo } = useRoster()
@@ -109,6 +109,7 @@ const RosterPage = () => {
          </div>
          <CompareBlock />
          <LearnMoreBlock />
+         <Footer />
         </>
     );
 };

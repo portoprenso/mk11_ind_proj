@@ -61,7 +61,7 @@ export default function Header() {
 
   function getSearchValue(e) {
     const search = new URLSearchParams(history.location.search)
-    console.log(history.location.pathname);
+    // console.log(history.location.pathname);
     return search.get('q')
 }
 
@@ -89,7 +89,7 @@ export default function Header() {
                       </div>
                   </li>
                   <Link exact to="/roster"><li className="ul__item">Roster</li></Link>
-                  <li className="ul__item">#MKKOLLECTIVE</li>
+                  <Link exact to ='/chat'><li className="ul__item">Чат</li></Link>
                   <li className="ul__item">Сообщество</li>
                   <li className="ul__item">Галлерея</li>
                   {/* <Link exact to="/store"><li className="ul__item">Продукция</li></Link> */}

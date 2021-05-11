@@ -2,13 +2,13 @@ import React, { useRef, useState} from 'react';
 import { Card, Button, Form, Alert } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext'
-
+import './Authorisation.css'
 
 const SignUp = () => {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const { signup } = useAuth()
+    const { signup, currentUser, logout } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
@@ -31,11 +31,15 @@ const SignUp = () => {
         setLoading(false)
     }
     return (
-        <div>
-            <>
-            <Card>
+        <div className="authorisation-hero">
+            <Card className="authorisation-card">
                 <Card.Body>
-                    <h2 className="text-center mb-3">Sign Up</h2>
+                    <h2 className="text-center mb-3">Пачпорт и пороль пжалста</h2>
+                    {currentUser ? (<div>
+                        <p>{currentUser.email}, ты так то уже авторизован</p>
+                        <Button onClick={logout} disabled={loading} className="w-100 btn-danger">Выйти из аккаунта</Button>
+                        </div>) : (<></>)}
+
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
@@ -43,21 +47,20 @@ const SignUp = () => {
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
                         <Form.Group id="password">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>Пороль</Form.Label>
                             <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
                         <Form.Group id="password-confirm">
-                            <Form.Label>Password Confirmation</Form.Label>
+                            <Form.Label>Ещё раз введи, я не записал</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
-                        <Button disabled={loading} className="w-100" type="submit">Sign Up</Button>
+                        <Button disabled={loading} className="w-100 btn-warning" type="submit">Зарегать свою морду</Button>
                     </Form>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Already have an account? <Link exact to="/login">Log in</Link>
+                Уже зареган? Тогда че ты тут делаеЩь? <Link exact to="/login">Авторизоваться</Link>
             </div>
-            </>
         </div>
     );
 };

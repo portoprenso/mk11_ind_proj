@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useReducer, useState} from 'react';
 import { auth } from '../firebase'
 import Cookies from 'js-cookie'
+import firebase from 'firebase'
 
 const AuthContext = React.createContext()
 
@@ -19,7 +20,6 @@ const reducer =(state=INIT_STATE,action)=>{
 
 export function AuthProvider({children}) {
     const [state,dispatch] = useReducer(reducer,INIT_STATE)
-
     const [currentUser, setCurrentUser ] = useState()
     const [loading, setLoading] = useState(true)
 
@@ -31,6 +31,12 @@ export function AuthProvider({children}) {
     function login(email, password) {
         Cookies.set('isLogged', '123')
         return auth.signInWithEmailAndPassword(email, password)
+    }
+
+    const loginWithGoogle = async () => {
+        const provider = new firebase.auth.GoogleAuthProvider()
+        const { user } = await auth.signInWithPopup(provider)
+        console.log(user)
     }
 
     function logout() {
@@ -90,7 +96,8 @@ export function AuthProvider({children}) {
         updatePassword,
         receiveCookie,
         createCookie,
-        setCookie
+        setCookie,
+        loginWithGoogle
     }
     
     return (
