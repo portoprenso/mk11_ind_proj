@@ -9,6 +9,8 @@ import { useRoster } from '../../contexts/RosterContext';
 import Header from '../Header/Header';
 import { useProducts } from '../../contexts/ProductsContext';
 import ProductCard from '../StoreBlock/StorePage/ProductCard';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
 
 const useStyles = makeStyles((theme) => ({
   oldOrders__itemContainer: {
@@ -31,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     const bigPicRef = useRef()
     const littlePicRef = useRef()
     const videoRef = useRef()
-    // console.log(currentUser)
+    console.log(currentUser)
 
     useEffect(() => {
       getProductsData(history)
@@ -130,6 +132,8 @@ const useStyles = makeStyles((theme) => ({
 
                 </div>
                 <div className="btn">
+                  <img className="profilePage__user-image" src={currentUser.photoURL} />
+                  <Button className="profilePage__user-name">{currentUser.displayName}</Button>
                   <Button className="profile-page__emailInfo-button" onClick={() => {console.log(productsData)}}>
                       {error && <Alert variant="danger">{error}</Alert>}
                       <strong>Email:</strong> {currentUser.email}
@@ -137,6 +141,7 @@ const useStyles = makeStyles((theme) => ({
                 <ButtonGroup className="dashBoard__buttongroup">
                       <Button color="primary" variant="contained"><Link to="/update-profile">Ред. профиль</Link></Button>
                       <Button color="primary" variant="contained" className="dashboard__logoutButton" onClick={handleLogout}><Link>Выйти</Link></Button>
+                      <Button color="primary" variant="contained"><Link exact to ='/cart'><ShoppingCartIcon/></Link></Button>
                 </ButtonGroup>
                 </div>
               </div>

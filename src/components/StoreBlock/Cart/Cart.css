@@ -35,9 +35,9 @@ thead{
     width: 200px;
     height: auto;
 }
-ul{
+/* ul{
     margin-left: 50px;
-}
+} */
 ul span{
     border-bottom: 1px solid #000;
     padding-left: 20px;

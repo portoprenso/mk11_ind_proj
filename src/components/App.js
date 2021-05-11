@@ -1,7 +1,7 @@
 import React from 'react'
 import SignUp from './SignUp'
 import { AuthProvider } from '../contexts/AuthContext';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import Login from './Login'
 import PrivateRoute from './PrivateRoute';
 import ForgotPassword from './ForgotPassword';
@@ -16,7 +16,9 @@ import ProductDetails from './StoreBlock/StorePage/ProductDetails';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Cart from './StoreBlock/Cart/Cart';
 import EditProduct from './StoreBlock/StorePage/EditProduct';
-
+import Chat from '../components/ChatBlock/Chat'
+import CheckoutPage from './StoreBlock/Cart/CheckoutPage';
+import Buy from './StoreBlock/Cart/Buy/Buy';
 
 const theme = createMuiTheme({
   palette: {
@@ -52,6 +54,9 @@ function App() {
               <Switch>
                 <PrivateRoute exact path="/profile" component={ProfilePage} />
                 <PrivateRoute path="/update-profile" component={UpdateProfile} />
+                <PrivateRoute exact path='/chat/' component={Chat}/>
+                <PrivateRoute exact path='/buy/' component={Buy}/>
+                <PrivateRoute exact path='/checkout/' component={CheckoutPage}/>
                 <Route path="/signup" component={SignUp} />
                 <Route path="/login" component={Login} />
                 <Route path="/forgot-password" component={ForgotPassword} />
@@ -61,7 +66,7 @@ function App() {
                 <Route exact path='/store/gamedetails/:id' component={ProductDetails}/>
                 <Route exact path='/cart' component={Cart}/>
                 <Route exact path='/store/editproduct/:id' component={EditProduct}/>
-
+                <Redirect exact to='/' />
               </Switch>
             </ProductsContextProvider>
             </AuthProvider>

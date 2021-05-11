@@ -99,14 +99,7 @@ const ProductDetails = (props) => {
             time: Date.now()
         }
 
-        // (newObj.commentary > 0 ? (
             newObj.commentary.push(newComment)
-            // )
-        //     :
-        //     (
-        //     newObj.commentary = [],
-        //     newObj.commentary.push(newComment)
-        // ))
 
         await editProduct(id, newObj, history);
         commentRef.current.value = null;

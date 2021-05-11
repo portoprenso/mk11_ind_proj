@@ -18,6 +18,7 @@ const GameDescBody = () => {
     return (
         <div className="game-desc-body__hero">
         <div className="game-desc-body__wrapper">
+        <img src="https://cdn-prod.mortalkombat.com/ultimate/global/vectors/tiny-horizontal-rule.svg"/>
             <div className="game-desc-body__title">
                 <h1>
                     САМОЕ ПОЛНОЕ ИЗДАНИЕ MORTAL KOMBAT 11
