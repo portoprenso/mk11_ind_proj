@@ -32,6 +32,7 @@ const Cart = () => {
     useEffect(() => {
         getCart()
     }, [])
+    console.log(cart)
 
     return (
         <>
@@ -42,7 +43,7 @@ const Cart = () => {
                     <table className="cart__table">
                         <tbody>
                             {cart.products.map(elem => (
-                                    <tr className="cart__tr-item" key={elem.item.id}>
+                                <tr className="cart__tr-item" key={elem.item.id}>
                                         <div className="img">
                                             <img src={elem.item.image}/>
                                         </div>
@@ -57,12 +58,23 @@ const Cart = () => {
                                     </tr>
                             ))}
                         </tbody>
-                        <div className="btn_sum">
-                            <h4>Общий итог: {calcTotalPrice(cart.products)}</h4>
+                        {cart.products.length > 0 ? (
+                            <div className="btn_sum">
+                                <h4>Общий итог: {calcTotalPrice(cart.products)}</h4>
 
-                            
-                            <Link exact to="/checkout"><button className="btn_click">Купить</button></Link>
-                        </div>
+                                
+                                <Link exact to="/checkout"><button className="btn_click">Купить</button></Link>
+                            </div>
+
+                        )
+                    :
+                    (
+                            <div className="btn_sum">
+                                <div>В Вашей корзине пусто</div>
+                                <Link exact to="/store"><Button>перейти к покупкам</Button></Link>
+                            </div>
+
+                    )}
                     </table>
                 </div>
             ) : (

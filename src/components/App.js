@@ -19,6 +19,8 @@ import EditProduct from './StoreBlock/StorePage/EditProduct';
 import Chat from '../components/ChatBlock/Chat'
 import CheckoutPage from './StoreBlock/Cart/CheckoutPage';
 import Buy from './StoreBlock/Cart/Buy/Buy';
+import Twitter from './ChatBlock/Twitter/Twitter';
+import Gallery from './Gallery/Gallery';
 
 const theme = createMuiTheme({
   palette: {
@@ -66,6 +68,8 @@ function App() {
                 <Route exact path='/store/gamedetails/:id' component={ProductDetails}/>
                 <Route exact path='/cart' component={Cart}/>
                 <Route exact path='/store/editproduct/:id' component={EditProduct}/>
+                <Route exact path='/twitter' component={Twitter}/>
+                <Route exact path='/gallery' component={Gallery}/>
                 <Redirect exact to='/' />
               </Switch>
             </ProductsContextProvider>

@@ -8,6 +8,7 @@ import './Chat.css'
 import {useCollectionData} from 'react-firebase-hooks/firestore'
 import firebase from 'firebase/app'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import Footer from '../Footer/Footer';
 
 const Chat = () => {
     const { currentUser } = useAuth()
@@ -78,6 +79,7 @@ const Chat = () => {
                 </Grid>
             </Container>
         </div>
+        <Footer/>
         </>
     );
 };
