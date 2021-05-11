@@ -3,7 +3,6 @@ import "../CompareBlock/CompareBlock.css";
 import "./LearnMoreBlock.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import firstCardImg from '../../assets/default-ultimate.jpg'
 import './LearnMoreBlock.css'
 
 import { Link } from "react-router-dom";

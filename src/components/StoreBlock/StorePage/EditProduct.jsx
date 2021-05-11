@@ -81,6 +81,7 @@ const EditProduct = ({ title, body }) => {
     imageRef.current.value = null;
     imageLargeRef.current.value = null;
     countInStockRef.current.value = null;
+    history.push('/store')
   }
 
   function calcDiscountpercent(first, second) {

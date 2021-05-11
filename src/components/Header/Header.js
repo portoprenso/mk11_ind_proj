@@ -91,7 +91,7 @@ export default function Header() {
                   <Link exact to="/roster"><li className="ul__item">Roster</li></Link>
                   <Link exact to ='/chat'><li className="ul__item">Чат</li></Link>
                   <li className="ul__item">Сообщество</li>
-                  <li className="ul__item">Галлерея</li>
+                  <Link exact to="/gallery"><li className="ul__item">Галлерея</li></Link>
                   {/* <Link exact to="/store"><li className="ul__item">Продукция</li></Link> */}
                   <Link><li onClick={() => nulifyDataLimit()} className="ul__item">Продукция</li></Link>
                   { currentUser ? 
@@ -127,7 +127,7 @@ export default function Header() {
                   }
 
               </ul>
-          <button variant="contained" color="primary" className="btn-buy"><Link className="hover-animated-link">Купить сейчас</Link></button>
+          {/* <button variant="contained" color="primary" className="btn-buy"><Link className="hover-animated-link">Купить сейчас</Link></button> */}
         </div>
       </div>
   );

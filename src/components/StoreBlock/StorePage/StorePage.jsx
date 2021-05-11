@@ -174,9 +174,9 @@ const StorePage = (props) => {
                             variant="fullWidth"
                             aria-label="full width tabs example"
                             >
-                            <Tab className="asd" onClick={() => getProductsDataIdSorted(history)} label="Новинки" {...a11yProps(0)} />
-                            <Tab className="asd" onClick={() => getProductsDataStockSorted(history)} label="В наличии" {...a11yProps(1)} />
-                            <Tab className="asd" onClick={() => getProductsDataExpectedSorted(history)} label="Ожидаемые" {...a11yProps(2)} />
+                            <Tab className="asd" label="Новинки" {...a11yProps(0)} />
+                            {/* <Tab className="asd" onClick={() => getProductsDataStockSorted(history)} label="В наличии" {...a11yProps(1)} />
+                            <Tab className="asd" onClick={() => getProductsDataExpectedSorted(history)} label="Ожидаемые" {...a11yProps(2)} /> */}
                             </Tabs>
                         </AppBar>
                         <SwipeableViews
