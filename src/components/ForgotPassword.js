@@ -29,7 +29,7 @@ const ForgotPassword = () => {
         <div className="authorisation-hero">
             <Card className="authorisation-card">
                 <Card.Body>
-                    <h2 className="text-center mb-3">Шо, зыбал пороле?</h2>
+                    <h2 className="text-center mb-3">Опа, шо, забыл пороле?</h2>
 
                     {currentUser ? (<div>
                         <p>{currentUser.email}, ты так то уже авторизован</p>

@@ -45,7 +45,7 @@ const Login = () => {
                     <h2 className="text-center mb-3">Авторизоваться</h2>
 
                     {currentUser ? (<div>
-                    <p>{currentUser.email}, ты так то уже авторизован</p>
+                    <p>{currentUser.email}, Вы уже авторизованы</p>
                     <Button onClick={logout} disabled={loading} className="w-100 btn-danger">Выйти из аккаунта</Button>
                     </div>) : (<></>)}
 
@@ -57,19 +57,19 @@ const Login = () => {
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
                         <Form.Group id="password">
-                            <Form.Label>Пороль ёпта</Form.Label>
+                            <Form.Label>Пароль</Form.Label>
                             <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
                         <Button disabled={loading} className="w-100 btn-warning" type="submit">Войти по Email</Button>
                     </Form>
                         <Button onClick={handleSubmitWithGoogle} disabled={loading} className="w-100 btn-warning" type="submit">Войти с помощью Google</Button>
                     <div className="w-100 text-center mt-3">
-                        <Link to='/forgot-password'>Забыль пороль?</Link>
+                        <Link to='/forgot-password'>Забыли пароль?</Link>
                     </div>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Desperate for an account? <Link to="/signup">Зарегать свою морду у меня на сайте</Link>
+                Вы ещё не зарегистрированы? <Link to="/signup">Зарегистрироваться</Link>
             </div>
             </div>
 

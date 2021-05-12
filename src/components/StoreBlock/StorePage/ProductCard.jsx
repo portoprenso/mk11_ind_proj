@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
+// import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
@@ -24,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
         padding: 20,
         justifyContent: "space-between",
         background: 'rgba(255, 255, 255, 0.1)',
+        WebkitTextStroke: '0.5px black',
+        color: 'white'
     },
     media: {
         backgroundSize: "contain",
@@ -59,7 +61,7 @@ export default function ProductCard({ item }) {
                 <Link item={item} id={item.id} exact to={`/store/gamedetails/${item.id}`}><DetailsIcon/></Link>
             </Typography>
             <Grid xs={1}>
-                { currentUser ? (<div>
+                { currentUser && currentUser.uid === 'Ti6pFHiMAkdij9f1OlefDNhkwFT2' ? (<div>
                     <Button onClick={() => deleteProduct(item.id, history)}>
                         <DeleteForeverIcon />
                     </Button>

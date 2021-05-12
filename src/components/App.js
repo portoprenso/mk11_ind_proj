@@ -59,6 +59,7 @@ function App() {
                 <PrivateRoute exact path='/chat/' component={Chat}/>
                 <PrivateRoute exact path='/buy/' component={Buy}/>
                 <PrivateRoute exact path='/checkout/' component={CheckoutPage}/>
+                <PrivateRoute exact path='/store/editproduct/:id' component={EditProduct}/>
                 <Route path="/signup" component={SignUp} />
                 <Route path="/login" component={Login} />
                 <Route path="/forgot-password" component={ForgotPassword} />
@@ -67,7 +68,6 @@ function App() {
                 <Route exact path="/store" component={StorePage} />
                 <Route exact path='/store/gamedetails/:id' component={ProductDetails}/>
                 <Route exact path='/cart' component={Cart}/>
-                <Route exact path='/store/editproduct/:id' component={EditProduct}/>
                 <Route exact path='/twitter' component={Twitter}/>
                 <Route exact path='/gallery' component={Gallery}/>
                 <Redirect exact to='/' />
