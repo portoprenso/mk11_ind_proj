@@ -22,7 +22,7 @@
     font-size: 20px;
     line-height: 1.5;
     color: #495057;
-    background-color: #fff;
+    background-color: rgba(253,169,15, 0.9);
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
@@ -59,7 +59,7 @@
     width: 150px;
     font-size: 14pt;
     color: white;
-    background: #225cfdb9;
+    background: rgba(253,169,15, 0.9);
     height: 55px;
     padding: 10px;
     border: 1px solid #225cfdad;

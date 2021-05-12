@@ -71,3 +71,15 @@
     /* color: white; */
     background: rgba(255, 255, 255, 0.1)!important;
 }
+
+.profile-page__addNewProduct-inputs{
+    padding: 50px;
+    border: 1px solid orange;
+    border-radius: 8px;
+}
+
+.profilePage__addHero__inputs__container{
+    padding: 50px;
+    border: 1px solid orange;
+    border-radius: 8px;
+}

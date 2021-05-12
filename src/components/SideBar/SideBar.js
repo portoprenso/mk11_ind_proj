@@ -12,7 +12,9 @@ import FormGroup from '@material-ui/core/FormGroup';
 
 const useStyles = makeStyles(theme => ({
     root: {
-      flexGrow: 1
+      flexGrow: 1,
+      WebkitTextStroke: '0.5px black',
+      color: 'white'
     },
     paper: {
       padding: theme.spacing(2),
@@ -24,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 const SideBar = ({ history }) => {
     const classes = useStyles();
     const { getProductsData } = useProducts()
-    const [sliderValue, setSliderValue] = useState([0, 20000])
+    const [sliderValue, setSliderValue] = useState([0, 7000])
     const [genre, setGenre] = useState((getGenre()))
     const [checkedGenre, setcheckedGenre] = useState({
         actions: false,
@@ -66,7 +68,7 @@ const SideBar = ({ history }) => {
     }
     
     return (
-        <Grid item md={3}>
+        <Grid item md={3} className={classes.root}>
             <Paper className={classes.paper}>
             <FormControl component="fieldset">
             <FormLabel component="legend">Жанры</FormLabel>
@@ -91,7 +93,7 @@ const SideBar = ({ history }) => {
                    <Slider
                        value={sliderValue}
                        min={500}
-                       max={20000}
+                       max={7000}
                        onChange={handleSliderValue}
                        valueLabelDisplay="auto"
                        aria-labelledby="range-slider"

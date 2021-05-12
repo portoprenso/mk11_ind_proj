@@ -202,6 +202,7 @@ const ProductsContextProvider = ({ children }) => {
     async function addNewProduct(newGame, story) {
         await axios.post(`${JSON_API}/products`, newGame)
         getProductsData(story)
+        alert('Новый продукт создан!')
     }
 
     async function deleteProduct(id, story) {

@@ -34,9 +34,9 @@ const SignUp = () => {
         <div className="authorisation-hero">
             <Card className="authorisation-card">
                 <Card.Body>
-                    <h2 className="text-center mb-3">Пачпорт и пороль пжалста</h2>
+                    <h2 className="text-center mb-3">Зарегистрироваться</h2>
                     {currentUser ? (<div>
-                        <p>{currentUser.email}, ты так то уже авторизован</p>
+                        <p>{currentUser.email}, Вы уже авторизованы</p>
                         <Button onClick={logout} disabled={loading} className="w-100 btn-danger">Выйти из аккаунта</Button>
                         </div>) : (<></>)}
 
@@ -47,19 +47,19 @@ const SignUp = () => {
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
                         <Form.Group id="password">
-                            <Form.Label>Пороль</Form.Label>
+                            <Form.Label>Пароль</Form.Label>
                             <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
                         <Form.Group id="password-confirm">
-                            <Form.Label>Ещё раз введи, я не записал</Form.Label>
+                            <Form.Label>Введите ещё раз</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
-                        <Button disabled={loading} className="w-100 btn-warning" type="submit">Зарегать свою морду</Button>
+                        <Button disabled={loading} className="w-100 btn-warning" type="submit">Зарегистрироваться</Button>
                     </Form>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Уже зареган? Тогда че ты тут делаеЩь? <Link exact to="/login">Авторизоваться</Link>
+                Уже зарегистрированы? <Link exact to="/login">Авторизоваться</Link>
             </div>
         </div>
     );

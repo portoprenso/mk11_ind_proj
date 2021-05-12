@@ -54,3 +54,13 @@
     text-align: center;
     color: white;
 }
+
+@media screen and (max-width: 480px){
+    .LearnMoreBlock__cardImg{
+        height: 75%;
+    }
+    .LearnMoreBlock__card__inner{
+        width: 320px;
+        height: 200px;    
+    }
+}

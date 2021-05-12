@@ -11,13 +11,14 @@ import {
 import { useAuth } from "../../../contexts/AuthContext";
 import { useProducts } from "../../../contexts/ProductsContext";
 import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
 
 const EditProduct = ({ title, body }) => {
   const { id } = useParams();
   const { getProductDetails, productDetails, editProduct } = useProducts()
   const [error, setError] = useState("");
   const [perc, setPerc] = useState(0);
-  const { currentUser, logout } = useAuth();
+  const { currentUser } = useAuth();
   const history = useHistory();
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -35,6 +36,7 @@ const EditProduct = ({ title, body }) => {
   }, [titleRef.current]);
 
   function putData() {
+    if(currentUser && currentUser.uid === 'Ti6pFHiMAkdij9f1OlefDNhkwFT2'){
     titleRef.current.value = productDetails.title;
     descriptionRef.current.value = productDetails.description;
     priceRef.current.value = productDetails.price;
@@ -44,7 +46,7 @@ const EditProduct = ({ title, body }) => {
     categoryRef.current.value = productDetails.category;
     imageRef.current.value = productDetails.image;
     imageLargeRef.current.value = productDetails.imageLarge;
-    countInStockRef.current.value = productDetails.countInStock;
+    countInStockRef.current.value = productDetails.countInStock;}
   }
 
   async function asd() {
@@ -71,17 +73,22 @@ const EditProduct = ({ title, body }) => {
       countInStock: countInStockRef.current.value,
     };
     await editProduct(id, newObj, history);
-    titleRef.current.value = null;
-    descriptionRef.current.value = null;
-    priceRef.current.value = null;
-    oldPriceRef.current.value = null;
-    discountPercentPriceRef.current.value = null;
-    authorRef.current.value = null;
-    categoryRef.current.value = null;
-    imageRef.current.value = null;
-    imageLargeRef.current.value = null;
-    countInStockRef.current.value = null;
-    history.push('/store')
+    if(currentUser && currentUser.uid === 'Ti6pFHiMAkdij9f1OlefDNhkwFT2'){
+      titleRef.current.value = null;
+      descriptionRef.current.value = null;
+      priceRef.current.value = null;
+      oldPriceRef.current.value = null;
+      discountPercentPriceRef.current.value = null;
+      authorRef.current.value = null;
+      categoryRef.current.value = null;
+      imageRef.current.value = null;
+      imageLargeRef.current.value = null;
+      countInStockRef.current.value = null;
+      history.push('/store')
+    } else {
+      return
+    }
+    
   }
 
   function calcDiscountpercent(first, second) {
@@ -92,7 +99,8 @@ const EditProduct = ({ title, body }) => {
   return (
       <>
       <Header />
-    <div style={{ dispaly: "flex" }}>
+      {currentUser && currentUser.uid === 'Ti6pFHiMAkdij9f1OlefDNhkwFT2' ? (
+    <div style={{ dispaly: "flex", paddingTop: 50, color: 'white', maxWidth: 1280, margin: '0 auto', justifyContent: 'center', alignItems: 'center' }}>
       <div className="fff">
         <div>
           <form className="inp-type">
@@ -199,6 +207,13 @@ const EditProduct = ({ title, body }) => {
         </div>
       </div>
     </div>
+
+      )
+      :
+      (
+        <></>
+      )}
+    <Footer />
     </>
   );
 };

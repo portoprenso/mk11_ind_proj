@@ -77,8 +77,54 @@ export default function Header() {
       <div className="nav-bar">
         <div className='nav-bar__wrapper'>
             <Link exact to='/'><img src={MKLogo} alt="asd" className="top-logo-mk" /></Link>
+                    <nav role="navigation">
+                      <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                        <Link exact to="/roster"><li className="ul__item">Roster</li></Link>
+                  <Link exact to ='/chat'><li className="ul__item">Чат</li></Link>
+                  <li className="ul__item">Сообщество</li>
+                  <Link exact to="/gallery"><li className="ul__item">Галлерея</li></Link>
+                  <Link><li onClick={() => nulifyDataLimit()} className="ul__item">Продукция</li></Link>
+                  { currentUser ? 
+                    (
+                      <Link exact to="/profile"><li className="ul__item"><button className='btn-buy'>Мой профиль</button></li></Link>
+                    )
+                    :
+                    (
+                      <Link exact to="/login"><li className="ul__item"><button className='btn-buy'>Войти</button></li></Link>
+                    )
+                  }
+
+                  {history.location.pathname=='/store/' ? (
+                      <div className={classes.search}>
+                        <div className={classes.searchIcon}>
+                            <SearchIcon />
+                        </div>
+                        <InputBase
+                            value={searchValue}
+                            onChange={handleValue}
+                            placeholder="Поиск игр..."
+                            classes={{
+                                root: classes.inputRoot,
+                                input: classes.inputInput,
+                            }}
+                            inputProps={{ 'aria-label': 'search' }}
+                        />
+                      </div>
+                  
+                  ) 
+                  : 
+                  (<></>)
+                  }
+                        </ul>
+                      </div>
+                    </nav>
               <ul className="header__ul">
-                  <li className="ul__item">
+                  {/* <li className="ul__item">
                       <div className="dropdown">
                           <button className="dropbtn">Dropdown</button>
                           <div className="dropdown-content">
@@ -86,13 +132,13 @@ export default function Header() {
                               <Link >Link 2</Link>
                               <Link >Link 3</Link>
                           </div>
+                          
                       </div>
-                  </li>
+                  </li> */}
                   <Link exact to="/roster"><li className="ul__item">Roster</li></Link>
                   <Link exact to ='/chat'><li className="ul__item">Чат</li></Link>
                   <li className="ul__item">Сообщество</li>
                   <Link exact to="/gallery"><li className="ul__item">Галлерея</li></Link>
-                  {/* <Link exact to="/store"><li className="ul__item">Продукция</li></Link> */}
                   <Link><li onClick={() => nulifyDataLimit()} className="ul__item">Продукция</li></Link>
                   { currentUser ? 
                     (
