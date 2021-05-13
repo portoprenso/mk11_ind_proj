@@ -3,28 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "4.11.3",
-    "@material-ui/icons": "4.11.2",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "*",
-    "@testing-library/jest-dom": "5.12.0",
-    "@testing-library/react": "11.2.6",
-    "@testing-library/user-event": "12.8.3",
-    "aos": "2.3.4",
-    "bootstrap": "4.6.0",
-    "firebase": "8.4.1",
-    "history": "4.10.1",
-    "js-cookie": "2.2.1",
-    "react": "17.0.2",
-    "react-bootstrap": "1.5.2",
-    "react-credit-cards": "0.8.3",
-    "react-dom": "17.0.2",
-    "react-firebase-hooks": "3.0.4",
-    "react-private-route": "1.1.2",
-    "react-router-dom": "5.2.0",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "aos": "^2.3.4",
+    "bootstrap": "^4.6.0",
+    "firebase": "^8.4.1",
+    "history": "^4.10.1",
+    "js-cookie": "^2.2.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
+    "react-credit-cards": "^0.8.3",
+    "react-dom": "^17.0.2",
+    "react-firebase-hooks": "^3.0.4",
+    "react-private-route": "^1.1.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "react-swipeable-views": "0.13.9",
-    "save": "2.4.0",
-    "web-vitals": "1.1.1"
+    "react-swipeable-views": "^0.13.9",
+    "save": "^2.4.0",
+    "web-vitals": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -53,20 +53,8 @@
   "engines": {
     "name": "myapp",
     "description": "a really cool app",
-    "version": "1.0.0"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "server.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/portoprenso/mk11_ind_proj.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/portoprenso/mk11_ind_proj/issues"
-  },
-  "homepage": "https://github.com/portoprenso/mk11_ind_proj#readme"
+    "version": "1.0.0",
+    "node": "14.x",
+    "npm": "6.x"
+  }
 }
