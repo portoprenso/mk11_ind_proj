@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { useHistory, useParams } from 'react-router';
+// import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router-dom';
 import './ProductDetails.css'
 import { makeStyles } from '@material-ui/core/styles';
 import { useProducts } from '../../../contexts/ProductsContext';

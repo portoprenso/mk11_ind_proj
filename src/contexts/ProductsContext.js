@@ -1,6 +1,6 @@
 import React, { useContext, useReducer } from 'react';
 import axios from 'axios'
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 
 const productsContext = React.createContext();
