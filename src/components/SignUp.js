@@ -16,7 +16,7 @@ const SignUp = () => {
     async function handleSubmit(e) {
         e.preventDefault()
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Passwords do not match')
+            return setError('Пароли не совпадают')
         }
 
         try {
@@ -26,7 +26,7 @@ const SignUp = () => {
             history.push('/')
         } catch(error){
             console.log(error);
-            setError('Failed to create an account')
+            setError('Не получилось создать аккаунт')
         }
         setLoading(false)
     }
