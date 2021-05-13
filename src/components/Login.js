@@ -20,7 +20,7 @@ const Login = () => {
             history.push("/")
         } catch(error){
             console.log(error);
-            setError('Failed to sign in')
+            setError('Не удалось авторизоваться')
         }
         setLoading(false)
     }
@@ -33,7 +33,7 @@ const Login = () => {
             history.push("/")
         } catch(error){
             console.log(error);
-            setError('Failed to sign in')
+            setError('Не удалось авторизоваться')
         }
         setLoading(false)
     }

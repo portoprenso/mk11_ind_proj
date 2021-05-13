@@ -16,7 +16,7 @@ const UpdateProfile = () => {
     function handleSubmit(e) {
         e.preventDefault()
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Passwords do not match')
+            return setError('Пароли не совпадают')
         }
 
         const promises = []
@@ -34,7 +34,7 @@ const UpdateProfile = () => {
         Promise.all(promises).then(() => {
             history.push('/')
         }).catch(() => {
-            setError('Failed to update account')
+            setError('Не удалось обновить аккаунт')
         }).finally(() => {
             setLoading(false)
         })

@@ -18,10 +18,10 @@ const ForgotPassword = () => {
             setError('')
             setLoading(true)
             await resetPassword(emailRef.current.value)
-            setMessage('Check your inbox for further instructions')
+            setMessage('Проверьте свою почту и перейдите по ссылке внутри')
         } catch(error){
             console.log(error);
-            setError('Failed to reset password')
+            setError('Не удалось сбросить пароль')
         }
         setLoading(false)
     }

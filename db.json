@@ -14,26 +14,6 @@
       "id": 18,
       "commentary": [
         {
-          "text": "kjlsdglklgdsjdgs",
-          "email": "portoprenso@gmail.com",
-          "time": 1620620160461
-        },
-        {
-          "text": "klsdgsd;dsg",
-          "email": "portoprenso@gmail.com",
-          "time": 1620620165403
-        },
-        {
-          "text": "kmsgklks",
-          "email": "portoprenso@gmail.com",
-          "time": 1620620584305
-        },
-        {
-          "text": "test comment",
-          "email": "chegevara.cgv@mail.ru",
-          "time": 1620645928261
-        },
-        {
           "text": "kjahdkjfhadf",
           "email": "portoprenso@gmail.com",
           "time": 1620712719437
@@ -42,11 +22,15 @@
           "text": "kjdsfkljjklsdf",
           "email": "portoprenso@gmail.com",
           "time": 1620738259333
+        },
+        {
+          "text": "lkqjlgjq",
+          "email": "chegevara.cgv@mail.ru",
+          "time": 1620816782941
         }
       ],
       "favorites": [],
       "likes": [
-        "chegevara.cgv@mail.ru",
         "portoprenso@gmail.com"
       ]
     },
@@ -70,7 +54,9 @@
         }
       ],
       "favorites": [],
-      "likes": []
+      "likes": [
+        "chegevara.cgv@mail.ru"
+      ]
     },
     {
       "title": "RESIDENT EVIL VILLAGE",
@@ -508,6 +494,24 @@
       "littlePic": "https://cdn-prod.mortalkombat.com/roster/shao-kahn/thumb-p.png",
       "video": "https://cdn-prod.mortalkombat.com/roster/shao-kahn/video.mp4",
       "id": 19
+    },
+    {
+      "name": "ДИ’ВОРА",
+      "phrase": "ВЫЖИВАНИЕ",
+      "description": "Ди’Вора – особь из расы китиннов, разумных насекомых с распределенным сознанием. Она служила Шао Кану, Коталь Кану и Шинноку, но верна оставалась лишь своему рою. Ди’Вора не чурается лжи, предательства и ударов в спину – все ради того, чтобы рой выжил, когда остальные погибнут.",
+      "bigPic": "https://cdn-prod.mortalkombat.com/roster/d-vorah/body.png",
+      "littlePic": "https://cdn-prod.mortalkombat.com/roster/d-vorah/thumb-p.png",
+      "video": "https://cdn-prod.mortalkombat.com/roster/d-vorah/video.mp4",
+      "id": 20
+    },
+    {
+      "name": "test person",
+      "phrase": "test",
+      "description": "test",
+      "bigPic": "test",
+      "littlePic": "test",
+      "video": "test",
+      "id": 21
     }
   ],
   "dbUsers": []
