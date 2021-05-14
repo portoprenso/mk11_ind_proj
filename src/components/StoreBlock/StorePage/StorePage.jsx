@@ -9,11 +9,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import axios from 'axios'
 import "./StorePage.css"
 import { useProducts } from '../../../contexts/ProductsContext';
 import Header from '../../Header/Header';
-import { Pagination } from '@material-ui/lab';
+// import { Pagination } from '@material-ui/lab';
 import SwipeableViews from 'react-swipeable-views';
 import purple from '@material-ui/core/colors/purple';
 import red from '@material-ui/core/colors/red';
