@@ -1,7 +1,7 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {Button, Grid} from "@material-ui/core";
 import ProductCard from "./ProductCard";
-import { BrowserRouter, Link, Route, Switch, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -9,13 +9,12 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import axios from 'axios'
 import "./StorePage.css"
 import { useProducts } from '../../../contexts/ProductsContext';
 import Header from '../../Header/Header';
 import SwipeableViews from 'react-swipeable-views';
-import purple from '@material-ui/core/colors/purple';
-import red from '@material-ui/core/colors/red';
+// import purple from '@material-ui/core/colors/purple';
+// import red from '@material-ui/core/colors/red';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { orange } from '@material-ui/core/colors';
 import SideBar from '../../SideBar/SideBar';
@@ -112,20 +111,20 @@ const StorePage = (props) => {
     const {
         getProductsData,
         productsData,
-        paginationPages,
-        getProductsDataIdSorted,
-        getProductsDataStockSorted,
-        getProductsDataExpectedSorted,
-        getProductsDataDiscountSorted,
-        productsWithDiscount,
+        // paginationPages,
+        // getProductsDataIdSorted,
+        // getProductsDataStockSorted,
+        // getProductsDataExpectedSorted,
+        // getProductsDataDiscountSorted,
+        // productsWithDiscount,
         changeDataLimit,
         dataLimit
     } = useProducts()
-    function getPage() {
-        const search = new URLSearchParams(history.location.search)
-        // console.log(history);
-        return search.get('_page')
-    }
+    // function getPage() {
+    //     const search = new URLSearchParams(history.location.search)
+    //     // console.log(history);
+    //     return search.get('_page')
+    // }
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -138,16 +137,16 @@ const StorePage = (props) => {
 
     
 
-    const [page, setPage] = useState(getPage())
-    const handlePage = (event, page) => {
-        const search = new URLSearchParams(history.location.search)
-        search.set('_page', page)
-        history.push(`${history.location.pathname}?${search.toString()}`)
-        setPage(page)
-        getProductsData(history)
-    }
+    // const [page, setPage] = useState(getPage())
+    // const handlePage = (event, page) => {
+    //     const search = new URLSearchParams(history.location.search)
+    //     search.set('_page', page)
+    //     history.push(`${history.location.pathname}?${search.toString()}`)
+    //     setPage(page)
+    //     getProductsData(history)
+    // }
 
-    console.log(dataLimit)
+    // console.log(dataLimit)
 
     useEffect(() => {
         getProductsData(history);
