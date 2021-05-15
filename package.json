@@ -53,9 +53,6 @@
     ]
   },
   "engines": {
-    "name": "myapp",
-    "description": "a really cool app",
-    "version": "1.0.0",
     "node": "14.x",
     "npm": "6.x"
   },
