@@ -13,7 +13,6 @@ import axios from 'axios'
 import "./StorePage.css"
 import { useProducts } from '../../../contexts/ProductsContext';
 import Header from '../../Header/Header';
-import { Pagination } from '@material-ui/lab';
 import SwipeableViews from 'react-swipeable-views';
 import purple from '@material-ui/core/colors/purple';
 import red from '@material-ui/core/colors/red';
