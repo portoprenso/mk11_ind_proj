@@ -30,7 +30,7 @@ const RosterPage = () => {
     function returnVideo(url){
         return(
             url ? (
-                <video key={url} autoPlay="autoplay" muted="muted" loop="loop" class="roster__container__video"><source src={url}/></video>
+                <video key={url} autoPlay="autoPlay" muted="muted" loop="loop" class="roster__container__video"><source src={url}/></video>
             )
                 :
                 (

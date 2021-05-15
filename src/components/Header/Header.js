@@ -88,7 +88,7 @@ export default function Header() {
                   <Link exact to ='/chat'><li className="ul__item">Чат</li></Link>
                   <li className="ul__item">Сообщество</li>
                   <Link exact to="/gallery"><li className="ul__item">Галлерея</li></Link>
-                  <Link><li onClick={() => nulifyDataLimit()} className="ul__item">Продукция</li></Link>
+                  <li onClick={() => nulifyDataLimit()} className="ul__item">Продукция</li>
                   { currentUser ? 
                     (
                       <Link exact to="/profile"><li className="ul__item"><button className='btn-buy'>Мой профиль</button></li></Link>
@@ -139,7 +139,7 @@ export default function Header() {
                   <Link exact to ='/chat'><li className="ul__item">Чат</li></Link>
                   <li className="ul__item">Сообщество</li>
                   <Link exact to="/gallery"><li className="ul__item">Галлерея</li></Link>
-                  <Link><li onClick={() => nulifyDataLimit()} className="ul__item">Продукция</li></Link>
+                  <li onClick={() => nulifyDataLimit()} className="ul__item">Продукция</li>
                   { currentUser ? 
                     (
                       <Link exact to="/profile"><li className="ul__item"><button className='btn-buy'>Мой профиль</button></li></Link>

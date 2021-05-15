@@ -5,7 +5,7 @@ import './MainBanner.css'
 const MainBanner = () => {
     return (
         <div className="main-banner-container">
-            <video autoplay="autoplay" muted="muted" loop="loop" playsInline="" className="bgVideo">
+            <video autoPlay="autoPlay" muted="muted" loop="loop" playsInline="" className="bgVideo">
                 <source src="https://cdn-prod.mortalkombat.com/ultimate/home/featured/ultimate.mp4"
                         type="video/mp4" />
             </video>
