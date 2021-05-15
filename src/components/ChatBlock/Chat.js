@@ -1,10 +1,4 @@
-import {
-  Avatar,
-  Button,
-  Container,
-  Grid,
-  TextField,
-} from "@material-ui/core";
+import { Avatar, Button, Container, Grid, TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";

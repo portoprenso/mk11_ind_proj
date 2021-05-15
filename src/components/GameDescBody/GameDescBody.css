@@ -2,8 +2,6 @@
     background-image: url('/src/assets/mid-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-attachment: fixed; */
-    /* background-position: 50%; */
     position: relative;
 }
 
@@ -34,7 +32,6 @@
 }
 
 .info-box {
-    /*box-sizing: border-box;*/
     width: 70%;
     padding-bottom: 200px;
     height: 600px;
@@ -44,7 +41,6 @@
 .outer {
     border: 2px solid #645a56;
     position: relative;
-    /*border-color: rgba(239,235,222,.6);*/
     height: 100%;
 }
 
@@ -53,7 +49,6 @@
     border: 4px solid #c1a768;
     margin: 5px;
     box-sizing: border-box;
-    /*height: 95%;*/
     height: 95%;
     align-items: center;
     background: rgba(0,0,0,.4);
@@ -87,25 +82,18 @@
     display: flex;
     width: 40%;
     position: relative;
-    /*height: min-content;*/
     bottom: 0;
 }
 
 .info-box__images img {
     position: absolute;
     bottom: 0;
-    /*width: 40%;*/
-    /*height: 40%;*/
 }
 
 .firstInfoCardImage{
-    /* position: absolute; */
     right: -120px;
     height: 450px;
-    /* height: 376px; */
-    /* width: 100%; */
     top: -265px;
-    /* top: 0; */
 }
 .secondInfoCardImage{
     left: -100px;

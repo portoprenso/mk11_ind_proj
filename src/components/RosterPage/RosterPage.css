@@ -23,7 +23,6 @@
 
 .roster__container__bio{
     display: flex;
-    /* flex-wrap: wrap; */
 }
 
 .bio__meta__name{
@@ -34,9 +33,7 @@
 .bio__meta__name__strap{
     width: initial;
     position: absolute;
-    /* right: -115px; */
     right: 0;
-    /* left: 0; */
     z-index: 0;
 }
 
@@ -87,7 +84,6 @@
 .roster__container__charactersList__list__card::after{
     background: linear-gradient(180deg,transparent,#000);
     content: "_";
-    /* justify-self: flex-start; */
     color: transparent;
     z-index: 50;
     position: absolute;
@@ -120,12 +116,6 @@
     margin: 0 auto;
 }
 
-/* .roster__container__charactersList__list__card:hover{
-    transition: 0.1s ease-in;
-    box-shadow: inset 0 0 50px rgba(253,169,15, 0.1), 0 0 50px rgba(253,169,15, 0.74);
-    outline-color: rgba(255, 255, 255, 0);
-    outline-offset: 15px;
-} */
 .roster__container__charactersList__list__card img:hover{
     transition: 0.1s ease-in;
     box-shadow: inset 0 0 50px rgba(253,169,15, 0.1), 0 0 50px rgba(253,169,15, 0.74);

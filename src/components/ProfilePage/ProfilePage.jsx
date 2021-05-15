@@ -13,16 +13,16 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Footer from '../Footer/Footer';
 
 
-const useStyles = makeStyles((theme) => ({
-  oldOrders__itemContainer: {
-      margin: '10px auto',
+// const useStyles = makeStyles((theme) => ({
+//   oldOrders__itemContainer: {
+//       margin: '10px auto',
 
-    }
-  }));
+//     }
+//   }));
 
   
   const ProfilePage = () => {
-    const classes = useStyles()
+    // const classes = useStyles()
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
     const { addNewFighter } = useRoster()

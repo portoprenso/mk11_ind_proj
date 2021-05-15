@@ -4,8 +4,6 @@
 
 .nav-bar {
     position: fixed;
-    /*top: 0px;*/
-    /* width: max-content; */
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     z-index: 10;
@@ -48,7 +46,6 @@
     background-color: white;
     border: solid black 1px;
     color: black;
-    /*padding: 16px;*/
     font-size: 16px;
     border-radius: 7px;
 }

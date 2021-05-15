@@ -48,18 +48,17 @@ const useStyles = makeStyles((theme) => ({
           justifyContent: 'space-evenly',
           marginTop: 50,
       },
-      paginationClass:{
-        marginTop: 50,
-        background: 'rgba(255, 255, 255, 0.1)',
-        color: 'white!important'
-      },
-      root: {
-        // backgroundImage: 'url(https://cdn-prod.mortalkombat.com/ultimate/media/media-bg.jpg)'
-        // width: "60%",
-      },
+      // paginationClass:{
+      //   marginTop: 50,
+      //   background: 'rgba(255, 255, 255, 0.1)',
+      //   color: 'white!important'
+      // },
+      // root: {
+      //   backgroundImage: 'url(https://cdn-prod.mortalkombat.com/ultimate/media/media-bg.jpg)',
+      //   width: "60%",
+      // },
       discountText: {
           height: 10,
-        //   marginBottom: 10
       },
       paperSmall: {
           height: 10

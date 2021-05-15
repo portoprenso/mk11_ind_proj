@@ -1,45 +1,42 @@
-.reduction-prices__header{
-    text-align: center;
+.reduction-prices__header {
+  text-align: center;
 }
-.testClassPrice{
-    /* align-self: center; */
-}
-.productCard__header{
-    align-self: center;
+
+.productCard__header {
+  align-self: center;
 }
 
 @media all and (max-width: 950px) {
-    .MuiPaper-root{
-        display: flex;
-        flex-direction: column !important;
-    }
-    .bigCardImage img{
-        /* width: 150px !important ; */
-       align-self: center !important;
-       width: 100% !important;
-    }
-    .video, .slider-wrapper{
-        display: none;
-    }
-    .MuiGrid-grid-xs-1 div{
-        display: flex;
-        flex-direction: row;
-    }
+  .MuiPaper-root {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .bigCardImage img {
+    align-self: center !important;
+    width: 100% !important;
+  }
+  .video,
+  .slider-wrapper {
+    display: none;
+  }
+  .MuiGrid-grid-xs-1 div {
+    display: flex;
+    flex-direction: row;
+  }
 }
-@media all and (max-width: 607px){
-    .game-list__item{
-        margin-left: 50px;
-    }
+@media all and (max-width: 607px) {
+  .game-list__item {
+    margin-left: 50px;
+  }
 }
-@media all and(max-width: 400px){
-    .makeStyles-productCard__price-26{
-        align-self: unset !important;
-    }
-    .testClassPrice{
-        align-self: unset !important; 
-
-    }
-    .productCard__header{
-        align-self: unset !important;
-    }
+@media all and(max-width: 400px) {
+  .makeStyles-productCard__price-26 {
+    align-self: unset !important;
+  }
+  .testClassPrice {
+    align-self: unset !important;
+  }
+  .productCard__header {
+    align-self: unset !important;
+  }
 }

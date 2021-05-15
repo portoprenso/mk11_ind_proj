@@ -124,17 +124,6 @@ export default function Header() {
                       </div>
                     </nav>
               <ul className="header__ul">
-                  {/* <li className="ul__item">
-                      <div className="dropdown">
-                          <button className="dropbtn">Dropdown</button>
-                          <div className="dropdown-content">
-                              <Link >Link 1</Link>
-                              <Link >Link 2</Link>
-                              <Link >Link 3</Link>
-                          </div>
-                          
-                      </div>
-                  </li> */}
                   <Link exact to="/roster"><li className="ul__item">Roster</li></Link>
                   <Link exact to ='/chat'><li className="ul__item">Чат</li></Link>
                   <li className="ul__item">Сообщество</li>
@@ -173,7 +162,6 @@ export default function Header() {
                   }
 
               </ul>
-          {/* <button variant="contained" color="primary" className="btn-buy"><Link className="hover-animated-link">Купить сейчас</Link></button> */}
         </div>
       </div>
   );

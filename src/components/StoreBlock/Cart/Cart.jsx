@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom'
 import { useProducts } from '../../../contexts/ProductsContext';
 import Header from '../../Header/Header';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    '& > * + *': {
-      marginLeft: theme.spacing(2),
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     display: 'flex',
+//     '& > * + *': {
+//       marginLeft: theme.spacing(2),
+//     },
+//   },
+// }));
 
 function calcTotalPrice(products) {
     let totalPrice = 0;
@@ -26,7 +26,7 @@ function calcTotalPrice(products) {
 
 
 const Cart = () => {
-    const classes = useStyles();
+    // const classes = useStyles();
     const { getCart, cart, changeProductCount, removeProductFromCart } = useProducts()
 
     useEffect(() => {

@@ -9,7 +9,6 @@ import tinyHorizontalLine from '../../assets/tiny-horizontal-rule.svg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import {Link} from "react-router-dom";
 import CompareBlock from '../CompareBlock/CompareBlock';
 import LearnMoreBlock from '../LearnMoreBlock/LearnMoreBlock';
 

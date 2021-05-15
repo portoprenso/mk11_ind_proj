@@ -1,5 +1,4 @@
-import { Avatar, Button, Container, Grid, TextareaAutosize, TextField } from '@material-ui/core';
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import './Gallery.css'

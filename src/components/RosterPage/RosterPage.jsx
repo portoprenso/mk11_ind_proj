@@ -3,15 +3,12 @@ import CompareBlock from '../CompareBlock/CompareBlock';
 import Header from '../Header/Header';
 import LearnMoreBlock from '../LearnMoreBlock/LearnMoreBlock';
 import './RosterPage.css'
-import WarriorPhoto from '../../assets/body.png'
-import YellowStrap from '../../assets/character-title-bg.png'
 import { useRoster } from '../../contexts/RosterContext';
 import Footer from '../Footer/Footer'
 
 const RosterPage = () => {
     const { getRosterData, rosterData, getFighterInfo, fighterInfo } = useRoster()
     const [ clickedId, setClickedId ] = useState(null)
-    // setClickedId('asd')
     useEffect(() => {
         getRosterData()
     }, []);
@@ -46,7 +43,6 @@ const RosterPage = () => {
         clickedId ?
             (
                 <>
-                    {/* <video autoplay="autoplay" muted="muted" loop="loop" class="roster__container__video"><source src="https://cdn-prod.mortalkombat.com/roster/spawn/video.mp4"/></video> */}
                     {returnVideo(fighterInfo.video)}
                         <div className="roster__container__bio">
                             <div className="bio__photo">

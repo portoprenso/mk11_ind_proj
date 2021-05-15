@@ -14,15 +14,12 @@
 .LearnMoreBlock__card__inner{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     width: 400px;
     height: 250px;
-    /* background-image: url(https://cdn-prod.mortalkombat.com/ultimate/discover/latest-trailers-bg-adv.jpg); */
 }
 
 .LearnMoreBlock__cardImg{
-    /* width: 100%; */
     position: relative;
     height: 100%;
     max-width: fit-content;
@@ -34,8 +31,6 @@
         border: 4px solid #c1a768;
         margin: 5px;
         box-sizing: border-box;
-        /*height: 95%;*/
-        /* height: 95%; */
         align-items: center;
         background: rgba(0,0,0,.4);
         background-repeat: no-repeat;

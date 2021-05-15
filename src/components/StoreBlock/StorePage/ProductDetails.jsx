@@ -36,12 +36,6 @@ const ProductDetails = (props) => {
             textAlign: 'center',
             transition: '0.7s'
         }
-        // main__Container:{
-        //     display: 'flex',
-        //     ['@media(max-width: 1000px)'] : {
-        //         display: 'none'
-        //   }
-        // }
     }));
 
     function showCommentSection(){

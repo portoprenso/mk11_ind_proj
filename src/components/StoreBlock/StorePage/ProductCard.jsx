@@ -27,11 +27,6 @@ const useStyles = makeStyles((theme) => ({
         WebkitTextStroke: '0.5px black',
         color: 'white'
     },
-    media: {
-        backgroundSize: "contain",
-        width: "25%",
-        minWidth: "10%",
-    },
     productCard__price: {
         display: 'flex',
         alignItems: 'center',
