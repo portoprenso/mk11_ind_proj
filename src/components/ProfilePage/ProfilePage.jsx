@@ -1,28 +1,20 @@
 import React, { useEffect, useRef, useState} from 'react';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import { Card, Alert } from 'react-bootstrap'
-import { Button, ButtonGroup, Grid, makeStyles, TextareaAutosize, Typography } from '@material-ui/core';
+import { Button, ButtonGroup, Grid, TextareaAutosize, Typography } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom'
 import axios from 'axios';
 import { useAuth } from '../../contexts/AuthContext';
 import './ProfilePage.css'
 import { useRoster } from '../../contexts/RosterContext';
-import Header from '../Header/Header';
 import { useProducts } from '../../contexts/ProductsContext';
 import ProductCard from '../StoreBlock/StorePage/ProductCard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import Footer from '../Footer/Footer';
 
-
-// const useStyles = makeStyles((theme) => ({
-//   oldOrders__itemContainer: {
-//       margin: '10px auto',
-
-//     }
-//   }));
 
   
   const ProfilePage = () => {
-    // const classes = useStyles()
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
     const { addNewFighter } = useRoster()
